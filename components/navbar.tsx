@@ -4,6 +4,8 @@ import { IoCallOutline } from "react-icons/io5";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 import SkyMarquee from "./skyMarquee";
 import { easeOut, motion } from "motion/react";
+import WalletDropdown from "./walletDropDown";
+import Link from "next/link";
 
 const navbarItems = [
   {
@@ -98,12 +100,14 @@ export default function Navbar() {
   return (
     <>
       <nav className="fixed top-0 left-0 z-999 w-screen h-16 bg-neutral-100 border-b border-neutral-300 flex items-center justify-between px-6 sm:px-8">
-        <h4 className="font-bold tracking-wide text-xl">
+        <Link
+        href={"/"}
+        className="font-bold tracking-wide text-xl">
           <span className="px-2.5 py-1 rounded-lg bg-black font-sans text-white mr-2">
             R
           </span>
           RahuNow
-        </h4>
+        </Link>
 
         <div className="hidden md:flex gap-4 text-[14px] text-neutral-600">
           {navbarItems.map((item) => (
@@ -118,11 +122,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex gap-4 items-center">
-          {isloggedIn && (
-            <button className="px-3 py-1 border border-neutral-400 rounded-lg text-neutral-700 hover:bg-neutral-200 cursor-pointer text-[14px] font-medium">
-              Wallet
-            </button>
-          )}
+          {isloggedIn && <WalletDropdown balance={40} />}
 
           <button className="px-2 py-1 bg-accent rounded-lg text-white flex items-center gap-1 font-medium text-[14px] tracking-wide cursor-pointer hover:bg-accent-hover">
             <IoCallOutline className="text-[15px]" />
@@ -136,7 +136,7 @@ export default function Navbar() {
           ) : (
             <button
               onClick={() => setisloggedIN(true)}
-              className="px-2 py-1 border border-neutral-400 rounded-lg text-neutral-700 hover:bg-neutral-200 cursor-pointer"
+              className="text-[14px] px-2 py-1 border border-neutral-400 rounded-lg text-neutral-700 hover:bg-neutral-200 cursor-pointer"
             >
               Sign In
             </button>
@@ -145,9 +145,7 @@ export default function Navbar() {
 
         <div className="flex md:hidden items-center gap-3">
           {isloggedIn ? (
-            <button className="px-3 py-1 border border-neutral-400 rounded-lg text-neutral-700 hover:bg-neutral-200 cursor-pointer text-[14px]">
-              Wallet
-            </button>
+            <WalletDropdown balance={40} />
           ) : (
             <button
               onClick={() => setisloggedIN(true)}

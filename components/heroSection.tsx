@@ -1,5 +1,5 @@
 "use client";
-import BirthForm from "@/components/readingForm";
+import BirthForm from "@/components/birthForm";
 import { easeOut, motion } from "motion/react";
 
 export default function HeroSection(){

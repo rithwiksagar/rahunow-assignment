@@ -66,7 +66,6 @@ export default function BirthReadingForm() {
           </p>
         </div>
 
-        {/* Name */}
         <div className="mt-8">
           <label className="block text-[10px] md:text-[11px] tracking-wider text-neutral-600 mb-1 ml-1">
             YOUR NAME (optional)
@@ -80,9 +79,7 @@ export default function BirthReadingForm() {
           />
         </div>
 
-        {/* Date & Time */}
         <div className="mt-5 grid md:grid-cols-2 gap-4">
-          {/* Date */}
           <div>
             <label className="block text-[10px] md:text-[11px] tracking-wider text-neutral-600 mb-1 ml-1">
               DATE OF BIRTH
@@ -113,7 +110,6 @@ export default function BirthReadingForm() {
             </div>
           </div>
 
-          {/* Time */}
           <div>
             <label className="block text-[10px] md:text-[11px] tracking-widest text-neutral-600 mb-1 ml-1">
               TIME OF BIRTH
@@ -145,7 +141,6 @@ export default function BirthReadingForm() {
           </div>
         </div>
 
-        {/* City */}
         <div className="mt-5">
           <label className="block text-[10px] md:text-[11px] tracking-wide text-neutral-600 mb-1 ml-1">
             CITY OF BIRTH
@@ -160,7 +155,6 @@ export default function BirthReadingForm() {
           />
         </div>
 
-        {/* Button */}
         <div className="flex justify-center">
           <button
             type="button"
