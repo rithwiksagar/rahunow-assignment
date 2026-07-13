@@ -5,7 +5,7 @@ import { CiWallet } from "react-icons/ci"
 
 const quickAmounts = [100, 200, 300]
 
-export default function WalletDropdown({ balance = 40 }) {
+export default function WalletDropdown() {
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement | null>(null)
 
@@ -47,7 +47,7 @@ export default function WalletDropdown({ balance = 40 }) {
         }}
         className="absolute right-0 mt-2 w-64 rounded-2xl border border-neutral-300 bg-neutral-100 shadow-lg p-4 z-50 origin-top-right">
           <p className="text-[12px] text-neutral-500 mb-1">Wallet balance</p>
-          <p className="text-2xl font-medium text-neutral-900 mb-4">₹{balance}</p>
+          <p className="text-2xl font-medium text-neutral-900 mb-4">₹ 14</p>
 
           <button className="w-full h-10 rounded-lg bg-accent text-white text-[13px] font-medium hover:bg-accent-hover cursor-pointer mb-3">
             Add cash
