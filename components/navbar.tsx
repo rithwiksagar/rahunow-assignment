@@ -122,7 +122,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex gap-4 items-center">
-          {isloggedIn && <WalletDropdown balance={40} />}
+          {isloggedIn && <WalletDropdown />}
 
           <button className="px-2 py-1 bg-accent rounded-lg text-white flex items-center gap-1 font-medium text-[14px] tracking-wide cursor-pointer hover:bg-accent-hover">
             <IoCallOutline className="text-[15px]" />
@@ -145,7 +145,7 @@ export default function Navbar() {
 
         <div className="flex md:hidden items-center gap-3">
           {isloggedIn ? (
-            <WalletDropdown balance={40} />
+            <WalletDropdown />
           ) : (
             <button
               onClick={() => setisloggedIN(true)}
