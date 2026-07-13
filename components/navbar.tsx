@@ -94,7 +94,7 @@ const navbarItems = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-
+  const [isloggedIn, setisloggedIN] = useState(false);
   return (
     <>
       <nav className="fixed top-0 left-0 z-999 w-screen h-16 bg-neutral-100 border-b border-neutral-300 flex items-center justify-between px-6 sm:px-8">
@@ -117,20 +117,46 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="hidden md:flex gap-4">
+        <div className="hidden md:flex gap-4 items-center">
+          {isloggedIn && (
+            <button className="px-3 py-1 border border-neutral-400 rounded-lg text-neutral-700 hover:bg-neutral-200 cursor-pointer text-[14px] font-medium">
+              Wallet
+            </button>
+          )}
+
           <button className="px-2 py-1 bg-accent rounded-lg text-white flex items-center gap-1 font-medium text-[14px] tracking-wide cursor-pointer hover:bg-accent-hover">
             <IoCallOutline className="text-[15px]" />
             Talk To Astrologer
           </button>
-          <button className="px-2 py-1 border border-neutral-400 rounded-lg text-neutral-700 hover:bg-neutral-200 cursor-pointer">
-            Sign In
-          </button>
+
+          {isloggedIn ? (
+            <button className="size-8 rounded-full bg-accent-text-on-tint text-white flex items-center justify-center font-semibold cursor-pointer hover:bg-neutral-700">
+              PS
+            </button>
+          ) : (
+            <button
+              onClick={() => setisloggedIN(true)}
+              className="px-2 py-1 border border-neutral-400 rounded-lg text-neutral-700 hover:bg-neutral-200 cursor-pointer"
+            >
+              Sign In
+            </button>
+          )}
         </div>
 
         <div className="flex md:hidden items-center gap-3">
-          <button className="px-2 py-1 border border-neutral-400 rounded-lg text-neutral-700 hover:bg-neutral-200 cursor-pointer text-[14px]">
-            Sign In
-          </button>
+          {isloggedIn ? (
+            <button className="px-3 py-1 border border-neutral-400 rounded-lg text-neutral-700 hover:bg-neutral-200 cursor-pointer text-[14px]">
+              Wallet
+            </button>
+          ) : (
+            <button
+              onClick={() => setisloggedIN(true)}
+              className="px-2 py-1 border border-neutral-400 rounded-lg text-neutral-700 hover:bg-neutral-200 cursor-pointer text-[14px]"
+            >
+              Sign In
+            </button>
+          )}
+
           <button
             onClick={() => setOpen(!open)}
             className="text-neutral-700 cursor-pointer"
