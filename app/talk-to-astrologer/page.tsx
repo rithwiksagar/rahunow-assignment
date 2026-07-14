@@ -13,20 +13,20 @@ export default function TalkToAstrologer() {
           seconds, and pay only for the minutes you use.
         </p>
 
-        <div className="mt-6 flex flex-wrap gap-x-5 gap-y-3 text-[13px] md:text-[14px] text-neutral-800">
+        <div className="mt-6 flex flex-wrap gap-x-5 gap-y-3 text-[13px] md:text-[14px] text-neutral-500">
           <div className="flex items-center gap-2">
             <span>●</span>
-            <span>All Astrologers Verified</span>
+            <span className="underline text-orange-500 cursor-pointer">All Astrologers Verified</span>
           </div>
 
           <div className="flex items-center gap-2">
             <span>●</span>
-            <span>100% Private</span>
+            <span className="underline text-orange-500 cursor-pointer">100% Private</span>
           </div>
 
           <div className="flex items-center gap-2">
             <span>●</span>
-            <span>Verified Experts</span>
+            <span className="underline text-orange-500 cursor-pointer">Verified Experts</span>
           </div>
         </div>
 
