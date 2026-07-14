@@ -124,10 +124,10 @@ export default function AstroCard({ Balance }: { Balance: number }) {
             </button>
           </div> :
           <div>
-          <div className="min-w-[90px] px-3 py-2 rounded-xl border border-neutral-200 text-neutral-600 mx-6 ">
+          <div className="min-w-[90px] px-3 py-2 rounded-xl border border-neutral-200 text-neutral-600 mx-6 cursor-pointer">
             Notify Me When Free
         </div>
-          <div className="mt-4 min-w-[90px] px-3 py-2 rounded-xl border bg-accent text-white mx-6 ">
+          <div className="mt-4 min-w-[90px] px-3 py-2 rounded-xl border bg-accent text-white mx-6 cursor-pointer">
             Book For Later
         </div>
         
