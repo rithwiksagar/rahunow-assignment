@@ -42,10 +42,10 @@ export default function WalletDropdown() {
             filter: "blur(0px)"
         }}
         transition={{
-            duration: 0.3,
+            duration: 0.2,
             ease: easeOut
         }}
-        className="absolute right-0 mt-2 w-64 rounded-2xl border border-neutral-300 bg-neutral-100 shadow-lg p-4 z-50 origin-top-right">
+        className="absolute right-0 mt-2 w-64 rounded-2xl border border-neutral-200 bg-neutral-100 shadow-lg p-4 z-50 origin-top-right">
           <p className="text-[12px] text-neutral-500 mb-1">Wallet balance</p>
           <p className="text-2xl font-medium text-neutral-900 mb-4">₹ 14</p>
 

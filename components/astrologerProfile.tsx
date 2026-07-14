@@ -55,7 +55,7 @@ export default function AstroCard({ Balance }: { Balance: number }) {
           key={astrologer.id}
           className="w-full max-w-[340px] mx-auto bg-card rounded-3xl py-0.5"
         >
-          <div className="mx-3 my-3 rounded-2xl bg-background/80 px-5 md:px-6 py-4">
+          <div className="mx-3 my-3 rounded-2xl bg-background/80 px-5 md:px-6 py-4 h-fit pb-2">
             <div className="flex justify-between items-start gap-3">
               <div className="flex items-center gap-2 min-w-0">
                 <span className="w-11 h-11 flex items-center justify-center rounded-full bg-accent text-white text-[14px] flex-shrink-0">
@@ -100,7 +100,7 @@ export default function AstroCard({ Balance }: { Balance: number }) {
                 </p>
 
                 {Balance < astrologer.chat && (
-                  <div className="flex items-center gap-1 mt-3 rounded-xl bg-orange-900 px-3 py-2 text-[13px] text-orange-200">
+                  <div className="flex items-center gap-1 mt-3 rounded-xl bg-orange-800/80 px-3 py-2 text-[13px] text-white">
                     <CiWallet className="size-4" /> Balance {Balance}. Top up to
                     chat
                   </div>

@@ -124,10 +124,12 @@ export default function Navbar() {
         <div className="hidden md:flex gap-4 items-center">
           {isloggedIn && <WalletDropdown />}
 
-          <button className="px-2 py-1 bg-accent rounded-lg text-white flex items-center gap-1 font-medium text-[14px] tracking-wide cursor-pointer hover:bg-accent-hover">
+          <Link 
+          href={"/talk-to-astrologer"}
+          className="px-2 py-1 bg-accent rounded-lg text-white flex items-center gap-1 font-medium text-[14px] tracking-wide cursor-pointer hover:bg-accent-hover">
             <IoCallOutline className="text-[15px]" />
             Talk To Astrologer
-          </button>
+          </Link>
 
           {isloggedIn ? (
             <button className="size-8 rounded-full bg-accent-text-on-tint text-white flex items-center justify-center font-semibold cursor-pointer hover:bg-neutral-700">
@@ -193,13 +195,14 @@ export default function Navbar() {
               {item.title}
             </h6>
           ))}
-          <button
+          <Link
+          href={"/talk-to-astrologer"}
             onClick={() => setOpen(false)}
             className="mt-2 px-2 py-2 bg-accent rounded-lg text-white flex items-center justify-center gap-1 font-medium text-[14px] tracking-wide cursor-pointer hover:bg-accent-hover"
           >
             <IoCallOutline className="text-[15px]" />
             Talk To Astrologer
-          </button>
+          </Link>
         </motion.div>
       )}
 
