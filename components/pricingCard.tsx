@@ -47,8 +47,8 @@ export default function PricingCard() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
       {Cards.map((cardDetails) => (
-        <div className="w-76 md:w-82 h-fit bg-card rounded-3xl">
-          <div className="h-48 w-70 md:w-76 mx-3 my-3 bg-background/80 rounded-2xl shadow-xl px-6 py-4">
+        <div className="w-78 md:w-82 h-fit bg-card rounded-3xl">
+          <div className="h-48 w-72 md:w-76 mx-3 my-3 bg-background/80 rounded-2xl shadow-xl px-6 py-4">
             <h6 className="text-xl md:text-2xl font-medium text-neutral-800 tracking-wide">{cardDetails.title}</h6>
             <p className="mt-1 text-[14px] text-neutral-500">{cardDetails.subheading}</p>
             <button className={`mt-5 py-2 px-4 text-[14px] md:text-[16px] font-medium text-white rounded-3xl ${(cardDetails.title == "Free Plan") ? "bg-accent": "bg-neutral-800 text-white"}`}>{cardDetails.buttonText}</button>
