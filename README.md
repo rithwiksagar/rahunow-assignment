@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RahuNow Redesign Concept
 
-## Getting Started
+A frontend redesign concept for **RahuNow**, created as part of a **React Internship Assessment**.
 
-First, run the development server:
+Rather than redesigning every page, I focused on the three most impactful parts of the product to explore a cohesive design direction in depth.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Live Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Demo:** https://rahunow-assignment.vercel.app
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+> **Note**
+>
+> To view the Pricing page, manually navigate to `/pricing`.
+> Click **Sign In** to access the Wallet page.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Focus Areas
 
-## Learn More
+- Landing Page
+- Pricing Page
+- Talk to Astrologer Page
 
-To learn more about Next.js, take a look at the following resources:
+These pages represent the primary user journey—from discovering the product to understanding pricing and finally connecting with an astrologer.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Design Principles
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Visual Hierarchy
 
-## Deploy on Vercel
+Making the most important actions and information immediately obvious through layout, typography, spacing, and contrast.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Consistency
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Creating a unified experience by using consistent components, spacing, colors, and interaction patterns across the product.
+
+## Improvements
+
+### Landing Page
+
+- Simplified the hero section to reduce visual clutter.
+- Improved content hierarchy and readability.
+- Added a clearer product introduction.
+- Made the birth details form the primary focal point.
+- Redesigned the navigation with a responsive mobile experience.
+
+### Pricing Page
+
+- Organized pricing into clear sections for easier comparison.
+- Improved the distinction between free and paid offerings.
+- Increased readability with better spacing and content grouping.
+- Redesigned wallet top-up options for quicker scanning.
+
+### Talk to Astrologer
+
+- Redesigned astrologer cards with a stronger focus on decision-making information.
+- Prioritized availability, rating, and pricing.
+- Improved call-to-action visibility.
+- Introduced different UI states for online, busy, away, and low-wallet balance.
+- Refined navigation flow between profile pages and session actions.
+
+## Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+
+## Notes
+
+This project was created as a frontend design exploration for an internship assessment. The redesign focuses on improving usability, visual hierarchy, and consistency while preserving the core functionality and intent of the original product.
