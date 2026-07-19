@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "RahuNow - Free AI Astrologer",
+  title: "AstroMaster - Free AI Astrologer",
   description: "",
 };
 

@@ -104,9 +104,9 @@ export default function Navbar() {
         href={"/"}
         className="font-bold tracking-wide text-xl">
           <span className="px-2.5 py-1 rounded-lg bg-black font-sans text-white mr-2">
-            R
+            A
           </span>
-          RahuNow
+          AstroMaster
         </Link>
 
         <div className="hidden md:flex gap-4 text-[14px] text-neutral-600">
@@ -147,7 +147,9 @@ export default function Navbar() {
 
         <div className="flex md:hidden items-center gap-3">
           {isloggedIn ? (
+            <>
             <WalletDropdown />
+            </>
           ) : (
             <button
               onClick={() => setisloggedIN(true)}

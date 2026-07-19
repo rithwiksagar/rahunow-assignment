@@ -1,8 +1,26 @@
+"use client";
+import { easeOut, motion } from "motion/react";
 import AstrologerFilters from "./AstrologerFilter";
 
 export default function TalkToAstrologer() {
   return (
-    <div className="mt-36">
+    <motion.div
+      initial={{
+        opacity: 0,
+        filter: "blur(4px)",
+        y: 10,
+      }}
+      animate={{
+        opacity: 1,
+        filter: "blur(0px)",
+        y: 0,
+      }}
+      transition={{
+        duration: 0.5,
+        ease: easeOut,
+      }}
+      className="mt-36"
+    >
       <div className="px-5 sm:px-8 lg:px-16 xl:px-40">
         <h4 className="text-3xl md:text-[40px] font-semibold tracking-normal">
           Talk To Your Astrologer
@@ -16,17 +34,23 @@ export default function TalkToAstrologer() {
         <div className="mt-6 flex flex-wrap gap-x-5 gap-y-3 text-[13px] md:text-[14px] text-neutral-500">
           <div className="flex items-center gap-2">
             <span>●</span>
-            <span className="underline text-orange-500 cursor-pointer">All Astrologers Verified</span>
+            <span className="underline text-orange-500 cursor-pointer">
+              All Astrologers Verified
+            </span>
           </div>
 
           <div className="flex items-center gap-2">
             <span>●</span>
-            <span className="underline text-orange-500 cursor-pointer">100% Private</span>
+            <span className="underline text-orange-500 cursor-pointer">
+              100% Private
+            </span>
           </div>
 
           <div className="flex items-center gap-2">
             <span>●</span>
-            <span className="underline text-orange-500 cursor-pointer">Verified Experts</span>
+            <span className="underline text-orange-500 cursor-pointer">
+              Verified Experts
+            </span>
           </div>
         </div>
 
@@ -34,7 +58,6 @@ export default function TalkToAstrologer() {
       </div>
 
       <AstrologerFilters resultCount={3} />
-      
-    </div>
+    </motion.div>
   );
 }
